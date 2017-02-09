@@ -41,10 +41,10 @@
 	[self updateStage];
 	
 	if( [user difficulty] == 1 ){
-		[self modal:[NSString stringWithFormat:@"dungeon %d",[user difficulty]]:@"You are walking into the abyss of the dungeon, clear each room and exit alive.":false];
+		[self modal:[NSString stringWithFormat:NSLocalizedString(@"viewC.dungeon", @"dungeon %d"),[user difficulty]]:NSLocalizedString(@"viewC.dungeonLevel_1", "You are walking into the abyss of the dungeon, clear each room and exit alive."):false];
 	}
 	else{
-		[self modal:[NSString stringWithFormat:@"dungeon %d",[user difficulty]]:[NSString stringWithFormat:@"Your maximum HP has increased to %dHP, but the monsters are growing stronger.",[user lifeMaximum]]:false];
+		[self modal:[NSString stringWithFormat:NSLocalizedString(@"viewC.dungeon", @"dungeon %d"),[user difficulty]]:[NSString stringWithFormat:NSLocalizedString(@"viewC.dungeonLevel_n", @"Your maximum HP has increased to %dHP, but the monsters are growing stronger."),[user lifeMaximum]]:false];
 	}
 }
 
@@ -179,9 +179,9 @@
 	_card4Wrapper.layer.cornerRadius = 10;
 	_card4Wrapper.clipsToBounds = YES;
 	
-	_lifeLabel.text = @"HEALTH";
-	_swordLabel.text = @"SHIELD";
-	_discardLabel.text = @"DEPTH";
+	_lifeLabel.text = NSLocalizedString(@"viewC.health", @"HEALTH");
+	_swordLabel.text = NSLocalizedString(@"viewC.shield", @"SHIELD");
+	_discardLabel.text = NSLocalizedString(@"viewC.depth", @"DEPTH");
 	
 	_lifeBarWrapper.backgroundColor = [UIColor colorWithWhite:0.2 alpha:1];
 	_lifeBarWrapper.clipsToBounds = YES;
@@ -223,7 +223,7 @@
 	NSString * swordValue = [NSString stringWithFormat:@"%d(%d)",[user equip], [user malus]];
 	
 	if( [user equip] > 0 ){
-		_swordLabel.text = [NSString stringWithFormat:@"SHIELD %d",[user equip]];
+		_swordLabel.text = [NSString stringWithFormat:NSLocalizedString(@"viewC.shield_d", @"SHIELD %d"),[user equip]];
 	}
 	
 	if( [user equip] == 0 ){
@@ -288,7 +288,7 @@
 		[NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(death) userInfo:nil repeats:NO];
 		// Percetn reached.
 		float percentage = ((float)[discardPile count] / 54.0) * 100;
-		[self modal:@"A monster killed you":[NSString stringWithFormat:@"You explored %d%% the dungeon before succumbing to your wounds.",(int)percentage]:false];
+		[self modal:NSLocalizedString(@"viewC.killed", @"A monster killed you"):[NSString stringWithFormat:NSLocalizedString(@"viewC.explored", @"You explored %d%% the dungeon before succumbing to your wounds."),(int)percentage]:false];
 		[self playTuneNamed:@"tune.defeat"];
 		return;
 	}
@@ -296,7 +296,7 @@
 	// Victory
 	
 	if( (int)[discardPile count] == 54 ){
-		[self modal:@"Dungeon complete":@"You have reached the end of the dongeon.":false];
+		[self modal:NSLocalizedString(@"viewC.complete", @"Dungeon complete"):NSLocalizedString(@"viewC.finished", @"You have reached the end of the dongeon."):false];
 		[self playTuneNamed:@"tune.victory"];
 	}
 }
@@ -304,42 +304,42 @@
 -(void)runButtonUpdate
 {
 	if( (int)[discardPile count] == 0 ){
-		[_runButton setTitle:[NSString stringWithFormat:@"SHUFFLE"] forState:UIControlStateNormal];
+		[_runButton setTitle:[NSString stringWithFormat:NSLocalizedString(@"viewC.shuffle", @"SHUFFLE")] forState:UIControlStateNormal];
 		[_runButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 	}
 	else if( [playableHand numberOfCards] == 1 ){
-		[_runButton setTitle:[NSString stringWithFormat:@"PASS"] forState:UIControlStateNormal];
+		[_runButton setTitle:[NSString stringWithFormat:NSLocalizedString(@"viewC.pass", @"PASS")] forState:UIControlStateNormal];
 		[_runButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 	}
 	else if( [user life] < 1 ){
-		[_runButton setTitle:[NSString stringWithFormat:@"RETRY"] forState:UIControlStateNormal];
+		[_runButton setTitle:[NSString stringWithFormat:NSLocalizedString(@"viewC.retry", @"RETRY")] forState:UIControlStateNormal];
 		[_runButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
 	}
 	else if( (int)[discardPile count] == 54 ){
-		[_runButton setTitle:[NSString stringWithFormat:@"DUNGEON%d",[user difficulty]+1] forState:UIControlStateNormal];
+		[_runButton setTitle:[NSString stringWithFormat:NSLocalizedString(@"viewC.dungeon1", @"DUNGEON%d"),[user difficulty]+1] forState:UIControlStateNormal];
 		[_runButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
 	}
 	else if( (int)[discardPile count] == 0 ){
-		[_runButton setTitle:@"PASS" forState:UIControlStateNormal];
+		[_runButton setTitle:NSLocalizedString(@"viewC.pass1", @"PASS") forState:UIControlStateNormal];
 		[_runButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 	}
 	else if( [playableHand numberOfCards] == 0){
-		[_runButton setTitle:[NSString stringWithFormat:@"WALKING"] forState:UIControlStateNormal];
+		[_runButton setTitle:[NSString stringWithFormat:NSLocalizedString(@"viewC.walking", @"WALKING")] forState:UIControlStateNormal];
 	}
 	else if([user escaped] == 1 && (int)[discardPile count] != 0){
-		[_runButton setTitle:@"FIGHT" forState:UIControlStateNormal];
+		[_runButton setTitle:NSLocalizedString(@"viewC.fight", @"FIGHT") forState:UIControlStateNormal];
 		[_runButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
 	}
 	else if( [playableHand numberOfCards] == 4){
-		[_runButton setTitle:[NSString stringWithFormat:@"RUN"] forState:UIControlStateNormal];
+		[_runButton setTitle:[NSString stringWithFormat:NSLocalizedString(@"viewC.run", @"RUN")] forState:UIControlStateNormal];
 		[_runButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 	}
 	else if( [playableHand numberOfCards] < 2){
-		[_runButton setTitle:[NSString stringWithFormat:@"RUN"] forState:UIControlStateNormal];
+		[_runButton setTitle:[NSString stringWithFormat:NSLocalizedString(@"viewC.run1", @"RUN")] forState:UIControlStateNormal];
 		[_runButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 	}
 	else {
-		[_runButton setTitle:@"FIGHT" forState:UIControlStateNormal];
+		[_runButton setTitle:NSLocalizedString(@"viewC.fight1", @"FIGHT") forState:UIControlStateNormal];
 		[_runButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
 	}
 	
@@ -370,7 +370,7 @@
 	// Malus
 	if( [card value] >= [user malus] ){
 		if( [user equip] > 0 ){
-			[self modal:@"Your shield broke":@"Attacking monsters with the same or greater strength as your shield, will break it.":true];
+			[self modal:NSLocalizedString(@"viewC.break", @"Your shield broke"):NSLocalizedString(@"viewC.breakDesc", @"Attacking monsters with the same or greater strength as your shield, will break it."):true];
 			[self playTuneNamed:@"tune.shield.break"];
 		}
 		[user looseEquip];
@@ -408,12 +408,12 @@
 	// Tutorials
 	if( [self loadHighScore] < 54 )
 	{
-		if( [discardPile count] < 4 && [[card type] isEqualToString:@"H"] && [user life] == [user lifeMaximum] ){ [self modal:@"Wasted A Potion" :@"Your health is already full, you should avoid wasting valuable potions.":true]; }
-		if( [discardPile count] < 4 && [[card type] isEqualToString:@"C"] && [user equip] < 1 ){ [self modal:@"Without protection" :@"You should really equip a shield before attacking monsters.":true]; }
-		if( [discardPile count] < 4 && [[card type] isEqualToString:@"S"] && [user equip] < 1 ){ [self modal:@"You need a shield" :@"You should really equip a shield before attacking monsters.":true]; }
+		if( [discardPile count] < 4 && [[card type] isEqualToString:@"H"] && [user life] == [user lifeMaximum] ){ [self modal:NSLocalizedString(@"viewC.wasted", @"Wasted A Potion") :NSLocalizedString(@"viewC.wastedDesc", @"Your health is already full, you should avoid wasting valuable potions."):true]; }
+		if( [discardPile count] < 4 && [[card type] isEqualToString:@"C"] && [user equip] < 1 ){ [self modal:NSLocalizedString(@"viewC.noProtection", @"Without protection") :NSLocalizedString(@"viewC.noProtectionDesc", @"You should really equip a shield before attacking monsters."):true]; }
+		if( [discardPile count] < 4 && [[card type] isEqualToString:@"S"] && [user equip] < 1 ){ [self modal:NSLocalizedString(@"viewC.needShield", @"You need a shield") :NSLocalizedString(@"viewC.needShieldDesc", @"You should really equip a shield before attacking monsters."):true]; }
 	}
 	
-	if( justHealed == 1 && [[card type] isEqualToString:@"H"] ){ justHealed = 1; [self modal:@"Feeling sick" :@"You may not consume 2 potions in a row.":true]; }
+	if( justHealed == 1 && [[card type] isEqualToString:@"H"] ){ justHealed = 1; [self modal:NSLocalizedString(@"viewC.sick", @"Feeling sick") :NSLocalizedString(@"viewC.sickDesc", @"You may not consume 2 potions in a row."):true]; }
 	else if( [[card type] isEqualToString:@"H"] ){ [self healCard:card]; }
 	else if( [[card type] isEqualToString:@"D"] ){[self swordCard:card]; }
 	else{ [self monsterCard:card]; }
@@ -531,7 +531,7 @@
 	}
 	
 	if([user escaped] == 1 && (int)[discardPile count] != 0){
-		[self modal:@"LOCKED":@"You may not run away twice in a row.":true];
+		[self modal:NSLocalizedString(@"viewC.locked", @"LOCKED"):NSLocalizedString(@"viewC.lockedDesc", @"You may not run away twice in a row."):true];
 		return;
 	}
 	
@@ -543,7 +543,7 @@
 	}
 	else
 	{
-		[self modal:@"LOCKED":@"You may not run away before a single card remains in the room.":false];
+		[self modal:NSLocalizedString(@"viewC.locked", @"LOCKED"):NSLocalizedString(@"viewC.lockedDesc1", @"You may not run away before a single card remains in the room."):false];
 		return;
 	}
 	

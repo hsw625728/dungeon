@@ -1,0 +1,47 @@
+/* 
+  Localizable.strings
+  Donsol
+
+  Created by HANSHAOWEN on 17/2/9.
+  Copyright © 2017年 Devine Lu Linvega. All rights reserved.
+*/
+"viewC.dungeon" = "dungeon %d";
+"viewC.dungeonLevel_1" = "You are walking into the abyss of the dungeon, clear each room and exit alive.";
+"viewC.dungeonLevel_n" = "Your maximum HP has increased to %dHP, but the monsters are growing stronger.";
+"viewC.health" = "HEALTH";
+"viewC.shield" = "SHIELD";
+"viewC.depth" = "DEPTH";
+"viewC.shield_d" = "SHIELD %d";
+"viewC.killed" = "A monster killed you";
+"viewC.explored" = "You explored %d%% the dungeon before succumbing to your wounds.";
+"viewC.complete" = "Dungeon complete";
+"viewC.finished" = "You have reached the end of the dongeon.";
+"viewC.shuffle" = "SHUFFLE";
+"viewC.pass" = "PASS";
+"viewC.retry" = "RETRY";
+"viewC.dungeon1" = "DUNGEON%d";
+"viewC.pass1" = "PASS";
+"viewC.walking" = "WALKING";
+"viewC.fight" = "FIGHT";
+"viewC.run" = "RUN";
+"viewC.run1" = "RUN";
+"viewC.fight1" = "FIGHT";
+"viewC.break" = "Your shield broke";
+"viewC.breakDesc" = "Attacking monsters with the same or greater strength as your shield, will break it.";
+"viewC.wasted" = "Wasted A Potion";
+"viewC.wastedDesc" = "Your health is already full, you should avoid wasting valuable potions.";
+"viewC.noProtection" = "Without protection";
+"viewC.noProtectionDesc" = "You should really equip a shield before attacking monsters.";
+"viewC.needShield" = "You need a shield";
+"viewC.needShieldDesc" = "You should really equip a shield before attacking monsters.";
+"viewC.sick" = "Feeling sick";
+"viewC.sickDesc" = "You may not consume 2 potions in a row.";
+"viewC.locked" = "LOCKED";
+"viewC.lockedDesc" = "You may not run away twice in a row.";
+"viewC.lockedDesc1" = "You may not run away before a single card remains in the room.";
+"menu.score" = "BEST SCORE %d";
+"menu.thanks" = "SPECIAL THANKS\nJOHN ETERNAL, ZACH GAGE, KURT BIEG & TEKGO";
+"menu.on" = "ON";
+"menu.off" = "OFF";
+"menu.default" = "default";
+"menu.logan" = "logan";

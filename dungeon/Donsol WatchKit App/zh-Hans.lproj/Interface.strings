@@ -1,0 +1,60 @@
+
+/* Class = "WKInterfaceLabel"; text = "♦︎"; ObjectID = "0J8-jJ-bbs"; */
+"0J8-jJ-bbs.text" = "♦︎";
+
+/* Class = "WKInterfaceLabel"; text = "11/21"; ObjectID = "2k7-oP-gYy"; */
+"2k7-oP-gYy.text" = "11/21";
+
+/* Class = "WKInterfaceLabel"; text = "21"; ObjectID = "4oG-TE-K8F"; */
+"4oG-TE-K8F.text" = "21";
+
+/* Class = "WKInterfaceButton"; title = "Return"; ObjectID = "82I-sc-kRa"; */
+"82I-sc-kRa.title" = "Return";
+
+/* Class = "WKInterfaceController"; title = "Donsol"; ObjectID = "AgC-eL-Hgc"; */
+"AgC-eL-Hgc.title" = "Donsol";
+
+/* Class = "WKInterfaceButton"; title = "Enter Dungeon"; ObjectID = "Dwb-b5-gfv"; */
+"Dwb-b5-gfv.title" = "Enter Dungeon";
+
+/* Class = "WKInterfaceLabel"; text = "AP"; ObjectID = "LKo-Gw-cBv"; */
+"LKo-Gw-cBv.text" = "AP";
+
+/* Class = "WKInterfaceLabel"; text = "21"; ObjectID = "O5u-BR-wTf"; */
+"O5u-BR-wTf.text" = "21";
+
+/* Class = "WKInterfaceLabel"; text = "1000"; ObjectID = "QSI-jf-0je"; */
+"QSI-jf-0je.text" = "1000";
+
+/* Class = "WKInterfaceLabel"; text = "●"; ObjectID = "QgF-2M-OLt"; */
+"QgF-2M-OLt.text" = "●";
+
+/* Class = "WKInterfaceLabel"; text = "You died.."; ObjectID = "S88-ti-jBP"; */
+"S88-ti-jBP.text" = "You died..";
+
+/* Class = "WKInterfaceLabel"; text = "21"; ObjectID = "W5s-ec-Kcw"; */
+"W5s-ec-Kcw.text" = "21";
+
+/* Class = "WKInterfaceLabel"; text = "21"; ObjectID = "Waa-Wg-LgL"; */
+"Waa-Wg-LgL.text" = "21";
+
+/* Class = "WKInterfaceLabel"; text = "21"; ObjectID = "ZAl-P4-uOR"; */
+"ZAl-P4-uOR.text" = "21";
+
+/* Class = "WKInterfaceLabel"; text = "♥︎"; ObjectID = "cfD-oM-SXZ"; */
+"cfD-oM-SXZ.text" = "♥︎";
+
+/* Class = "WKInterfaceLabel"; text = "XP"; ObjectID = "ju3-Q6-fjJ"; */
+"ju3-Q6-fjJ.text" = "XP";
+
+/* Class = "WKInterfaceButton"; title = "Pass"; ObjectID = "qBy-lE-Pzd"; */
+"qBy-lE-Pzd.title" = "Pass";
+
+/* Class = "WKInterfaceLabel"; text = "Best"; ObjectID = "r0W-wy-7hx"; */
+"r0W-wy-7hx.text" = "Best";
+
+/* Class = "WKInterfaceLabel"; text = "HP"; ObjectID = "rK3-C1-YcT"; */
+"rK3-C1-YcT.text" = "HP";
+
+/* Class = "WKInterfaceLabel"; text = "-1"; ObjectID = "srD-kZ-VGd"; */
+"srD-kZ-VGd.text" = "-1";

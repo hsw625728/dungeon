@@ -173,6 +173,7 @@
 		57C7227D1AB23521005F70B6 /* click.4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 57C722791AB23521005F70B6 /* click.4.wav */; };
 		57C722861AB23B6C005F70B6 /* segueFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C722841AB23B6C005F70B6 /* segueFade.m */; };
 		57C722891AB23D84005F70B6 /* splash.logo.eternal.png in Resources */ = {isa = PBXBuildFile; fileRef = 57C722881AB23D84005F70B6 /* splash.logo.eternal.png */; };
+		5822C6721E4C689B0068BBC2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5822C6741E4C689B0068BBC2 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -295,7 +296,6 @@
 		57BC29CF1AA162BA00098150 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		57BC29D11AA162BA00098150 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		57BC29D21AA162BA00098150 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		57BC29D51AA162BA00098150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57BC29D71AA162BA00098150 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		57BC29DA1AA162BA00098150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		57BC29F01AA1653E00098150 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
@@ -368,6 +368,11 @@
 		57C722831AB23B6C005F70B6 /* segueFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = segueFade.h; path = assets.splash/segueFade.h; sourceTree = "<group>"; };
 		57C722841AB23B6C005F70B6 /* segueFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = segueFade.m; path = assets.splash/segueFade.m; sourceTree = "<group>"; };
 		57C722881AB23D84005F70B6 /* splash.logo.eternal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.logo.eternal.png; path = assets.splash/splash.logo.eternal.png; sourceTree = "<group>"; };
+		5822C6761E4C68BE0068BBC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5822C6791E4C68DF0068BBC2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
+		5822C67A1E4C68DF0068BBC2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		5822C67F1E4C803F0068BBC2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		5822C6801E4C80450068BBC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58FDF0B91B138E38002C654E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58FDF0BA1B138E38002C654E /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		58FDF0BC1B138E38002C654E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -606,6 +611,7 @@
 				57BC29D71AA162BA00098150 /* Images.xcassets */,
 				57BC29D91AA162BA00098150 /* LaunchScreen.xib */,
 				57BC29CA1AA162BA00098150 /* Supporting Files */,
+				5822C6741E4C689B0068BBC2 /* Localizable.strings */,
 			);
 			path = solitaryDongeon;
 			sourceTree = "<group>";
@@ -732,6 +738,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 57BC29BE1AA162BA00098150;
 			productRefGroup = 57BC29C81AA162BA00098150 /* Products */;
@@ -849,6 +856,7 @@
 				5766B76C1AFBA4A5008A631D /* tune.shield.break.wav in Resources */,
 				5766B7551AFB9BE5008A631D /* logan.card.0039 in Resources */,
 				5766B7731AFBA65A008A631D /* tune.health.unchanged.wav in Resources */,
+				5822C6721E4C689B0068BBC2 /* Localizable.strings in Resources */,
 				57494CBE1B32238000E9E3DD /* splash.tune.wav in Resources */,
 				571E425B1ABFA99200898520 /* tune.menu.wav in Resources */,
 				574CFC8F1ABF4E1900717F08 /* tune.victory.wav in Resources */,
@@ -932,7 +940,8 @@
 		57BC29D41AA162BA00098150 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				57BC29D51AA162BA00098150 /* Base */,
+				5822C67F1E4C803F0068BBC2 /* zh-Hans */,
+				5822C6801E4C80450068BBC2 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -945,10 +954,20 @@
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
+		5822C6741E4C689B0068BBC2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5822C6761E4C68BE0068BBC2 /* en */,
+				5822C67A1E4C68DF0068BBC2 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		58FDF0C71B138E39002C654E /* Interface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				58FDF0C81B138E39002C654E /* Base */,
+				5822C6791E4C68DF0068BBC2 /* zh-Hans */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";
@@ -960,6 +979,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1004,6 +1024,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

@@ -1,0 +1,47 @@
+/* 
+  Localizable.strings
+  Donsol
+
+  Created by HANSHAOWEN on 17/2/9.
+  Copyright © 2017年 Devine Lu Linvega. All rights reserved.
+*/
+"viewC.dungeon" = "地牢 %d";
+"viewC.dungeonLevel_1" = "你走进了深渊地牢，你要杀死每个牢房的怪物，并活着出来。";
+"viewC.dungeonLevel_n" = "你的生命值上限提升至 %dHP，但是怪物会变的更强。";
+"viewC.health" = "生命值";
+"viewC.shield" = "格挡值";
+"viewC.depth" = "深度";
+"viewC.shield_d" = "格挡值 %d";
+"viewC.killed" = "你被怪物杀死了";
+"viewC.explored" = "在倒下之前，你探索了 %d%% 层地牢。";
+"viewC.complete" = "清理完成";
+"viewC.finished" = "你到达了地牢的最深处。";
+"viewC.shuffle" = "洗牌";
+"viewC.pass" = "跳过";
+"viewC.retry" = "重试";
+"viewC.dungeon1" = "地牢%d";
+"viewC.pass1" = "跳过";
+"viewC.walking" = "继续走";
+"viewC.fight" = "战斗";
+"viewC.run" = "逃跑";
+"viewC.run1" = "逃跑";
+"viewC.fight1" = "战斗";
+"viewC.break" = "盾牌破碎";
+"viewC.breakDesc" = "怪物的攻击如果大于或者等于你的盾牌格挡值，盾牌将会被击碎。";
+"viewC.wasted" = "浪费了恢复药水";
+"viewC.wastedDesc" = "生命值已满，你应该避免浪费宝贵的药水。";
+"viewC.noProtection" = "无保护";
+"viewC.noProtectionDesc" = "在攻击怪物之前你应该装备盾牌。";
+"viewC.needShield" = "你需要一个盾牌";
+"viewC.needShieldDesc" = "在攻击怪物之前你应该装备盾牌。";
+"viewC.sick" = "感觉不舒服";
+"viewC.sickDesc" = "你不能连续两次使用药水。";
+"viewC.locked" = "已锁定";
+"viewC.lockedDesc" = "你不能连续两次逃跑。";
+"viewC.lockedDesc1" = "还有一张卡片留在地牢，你不可以逃跑。";
+"menu.score" = "最好成绩 %d";
+"menu.thanks" = "特别感谢\nJOHN ETERNAL, ZACH GAGE, KURT BIEG & TEKGO";
+"menu.on" = "开";
+"menu.off" = "关";
+"menu.default" = "default";
+"menu.logan" = "logan";

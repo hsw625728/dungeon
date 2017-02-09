@@ -356,7 +356,7 @@ typedef NS_ENUM(NSInteger, CastleTile) {
     _enterButton.frame = CGRectMake(margin, self.castleView.frame.size.height + margin, self.view.frame.size.width-(2*margin), margin);
 
     _scoreLabel.frame = CGRectMake(margin, self.castleView.frame.size.height + margin, self.view.frame.size.width-(2*margin), margin);
-    _scoreLabel.text = [NSString stringWithFormat:@"BEST SCORE %d",[AppDelegate highScore]];
+    _scoreLabel.text = [NSString stringWithFormat:NSLocalizedString(@"menu.score", @"BEST SCORE %d"),[AppDelegate highScore]];
     _scoreLabel.textColor = [UIColor colorWithWhite:0.3 alpha:1];
 	
 	// Pack
@@ -378,7 +378,7 @@ typedef NS_ENUM(NSInteger, CastleTile) {
 	// Thank
 	
     _thanksLabel.frame = CGRectMake(margin, self.view.frame.size.height-(3*margin), self.view.frame.size.width-(2*margin), margin*2);
-    _thanksLabel.text = @"SPECIAL THANKS\nJOHN ETERNAL, ZACH GAGE, KURT BIEG & TEKGO";
+    _thanksLabel.text = NSLocalizedString(@"menu.thanks", @"SPECIAL THANKS\nJOHN ETERNAL, ZACH GAGE, KURT BIEG & TEKGO");
     _thanksLabel.textColor = [UIColor colorWithWhite:0.3 alpha:1];
 	
 	float ratio = self.view.frame.size.width/self.view.frame.size.height;
@@ -405,11 +405,11 @@ typedef NS_ENUM(NSInteger, CastleTile) {
 {
 	NSLog(@"Change pack design");
 	
-	if( [[self loadPackDesign] isEqualToString:@"default"] ){
-		[self setPackDesign:@"logan"];
+	if( [[self loadPackDesign] isEqualToString:NSLocalizedString(@"menu.default", @"default")] ){
+		[self setPackDesign:NSLocalizedString(@"menu.logan", @"logan")];
 	}
 	else{
-		[self setPackDesign:@"default"];
+		[self setPackDesign:NSLocalizedString(@"menu.default", @"default")];
 	}
 	
 	_packDesignLabel.text = [[self loadPackDesign] uppercaseString];
@@ -422,11 +422,11 @@ typedef NS_ENUM(NSInteger, CastleTile) {
 
 - (IBAction)tutorialToggleButton:(id)sender
 {
-	if( [[self loadTutorialSetting] isEqualToString:@"ON"] ){
-		[self setTutorialSetting:@"OFF"];
+	if( [[self loadTutorialSetting] isEqualToString:NSLocalizedString(@"menu.on", @"ON")] ){
+		[self setTutorialSetting:NSLocalizedString(@"menu.off", @"OFF")];
 	}
 	else{
-		[self setTutorialSetting:@"ON"];
+		[self setTutorialSetting:NSLocalizedString(@"menu.on", @"ON")];
 	}
 	
 	_tutorialToggleLabel.text = [[self loadTutorialSetting] uppercaseString];
@@ -444,10 +444,10 @@ typedef NS_ENUM(NSInteger, CastleTile) {
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	
 	if( ![defaults objectForKey:@"packDesign"]  ){
-		return @"default";
+		return NSLocalizedString(@"menu.default", @"default");
 	}
 	if( [[defaults objectForKey:@"packDesign"] isEqualToString:@""] ){
-		return @"default";
+		return NSLocalizedString(@"menu.default", @"default");
 	}
 	return [defaults objectForKey:@"packDesign"];
 }
@@ -464,10 +464,10 @@ typedef NS_ENUM(NSInteger, CastleTile) {
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	
 	if( ![defaults objectForKey:@"tutorial"]  ){
-		return @"ON";
+		return NSLocalizedString(@"menu.on", @"ON");
 	}
 	if( [[defaults objectForKey:@"tutorial"] isEqualToString:@""] ){
-		return @"ON";
+		return NSLocalizedString(@"menu.on", @"ON");
 	}
 	return [defaults objectForKey:@"tutorial"];
 }
