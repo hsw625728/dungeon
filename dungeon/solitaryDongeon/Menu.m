@@ -375,6 +375,10 @@ typedef NS_ENUM(NSInteger, CastleTile) {
 	_tutorialToggleLabel.text = [self loadTutorialSetting];
 	_tutorialToggleLabel.textColor = [UIColor colorWithWhite:0.3 alpha:1];
 	
+    // Guide
+    
+    _thanksButton.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*7), self.view.frame.size.width-(2*margin), margin);
+    
 	// Thank
 	
     _thanksLabel.frame = CGRectMake(margin, self.view.frame.size.height-(3*margin), self.view.frame.size.width-(2*margin), margin*2);
@@ -430,6 +434,9 @@ typedef NS_ENUM(NSInteger, CastleTile) {
 	}
 	
 	_tutorialToggleLabel.text = [[self loadTutorialSetting] uppercaseString];
+}
+- (IBAction)thanksButton:(id)sender {
+    [self performSegueWithIdentifier:@"guide" sender:self];
 }
 
 -(void)setPackDesign:(NSString*)pack

@@ -174,6 +174,10 @@
 		57C722861AB23B6C005F70B6 /* segueFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C722841AB23B6C005F70B6 /* segueFade.m */; };
 		57C722891AB23D84005F70B6 /* splash.logo.eternal.png in Resources */ = {isa = PBXBuildFile; fileRef = 57C722881AB23D84005F70B6 /* splash.logo.eternal.png */; };
 		5822C6721E4C689B0068BBC2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5822C6741E4C689B0068BBC2 /* Localizable.strings */; };
+		5822C6861E4DB61A0068BBC2 /* Guide.m in Sources */ = {isa = PBXBuildFile; fileRef = 5822C6851E4DB61A0068BBC2 /* Guide.m */; };
+		5822C6931E4DC1740068BBC2 /* normalize.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 5822C6911E4DC1740068BBC2 /* normalize.min.css */; };
+		5822C6941E4DC1740068BBC2 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 5822C6921E4DC1740068BBC2 /* style.css */; };
+		5822C69B1E4DC2210068BBC2 /* guide.html in Resources */ = {isa = PBXBuildFile; fileRef = 5822C69A1E4DC2210068BBC2 /* guide.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -373,6 +377,11 @@
 		5822C67A1E4C68DF0068BBC2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5822C67F1E4C803F0068BBC2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		5822C6801E4C80450068BBC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5822C6841E4DB61A0068BBC2 /* Guide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Guide.h; sourceTree = "<group>"; };
+		5822C6851E4DB61A0068BBC2 /* Guide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Guide.m; sourceTree = "<group>"; };
+		5822C6911E4DC1740068BBC2 /* normalize.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = normalize.min.css; path = Resources/normalize.min.css; sourceTree = "<group>"; };
+		5822C6921E4DC1740068BBC2 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = style.css; path = Resources/style.css; sourceTree = "<group>"; };
+		5822C69A1E4DC2210068BBC2 /* guide.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = guide.html; path = Resources/guide.html; sourceTree = "<group>"; };
 		58FDF0B91B138E38002C654E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58FDF0BA1B138E38002C654E /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		58FDF0BC1B138E38002C654E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -587,6 +596,7 @@
 		57BC29C91AA162BA00098150 /* solitaryDongeon */ = {
 			isa = PBXGroup;
 			children = (
+				5822C6871E4DC09F0068BBC2 /* Resources */,
 				57494CC01B32238B00E9E3DD /* splash */,
 				574F0A861ABE07C1008EAF3B /* assets.castle */,
 				57C722751AB23521005F70B6 /* assets.sounds */,
@@ -606,6 +616,8 @@
 				57B172551AA182FD00DE1796 /* User.h */,
 				57B172561AA182FD00DE1796 /* User.m */,
 				57BC29D41AA162BA00098150 /* Main.storyboard */,
+				5822C6841E4DB61A0068BBC2 /* Guide.h */,
+				5822C6851E4DB61A0068BBC2 /* Guide.m */,
 				57C722701AB22FE2005F70B6 /* Menu.h */,
 				57C722711AB22FE2005F70B6 /* Menu.m */,
 				57BC29D71AA162BA00098150 /* Images.xcassets */,
@@ -653,6 +665,24 @@
 				57C722791AB23521005F70B6 /* click.4.wav */,
 			);
 			path = assets.sounds;
+			sourceTree = "<group>";
+		};
+		5822C6871E4DC09F0068BBC2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5822C6881E4DC0B00068BBC2 /* HTML */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5822C6881E4DC0B00068BBC2 /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				5822C69A1E4DC2210068BBC2 /* guide.html */,
+				5822C6911E4DC1740068BBC2 /* normalize.min.css */,
+				5822C6921E4DC1740068BBC2 /* style.css */,
+			);
+			name = HTML;
 			sourceTree = "<group>";
 		};
 		58FDF0B71B138E38002C654E /* Donsol WatchKit Extension */ = {
@@ -766,6 +796,7 @@
 				571E425C1ABFA99200898520 /* tune.intro.wav in Resources */,
 				5766B73D1AFB9BE5008A631D /* logan.card.0015 in Resources */,
 				574F0A901ABE07C1008EAF3B /* piece.edge.png in Resources */,
+				5822C69B1E4DC2210068BBC2 /* guide.html in Resources */,
 				57C3867E1AAD6A8B0080F31D /* default.card.0045 in Resources */,
 				5766B72F1AFB9BE5008A631D /* logan.card.0001 in Resources */,
 				57C386631AAD6A8B0080F31D /* default.card.0018 in Resources */,
@@ -795,6 +826,7 @@
 				5766B74C1AFB9BE5008A631D /* logan.card.0030 in Resources */,
 				5766B7401AFB9BE5008A631D /* logan.card.0018 in Resources */,
 				5766B7351AFB9BE5008A631D /* logan.card.0007 in Resources */,
+				5822C6931E4DC1740068BBC2 /* normalize.min.css in Resources */,
 				57C3867B1AAD6A8B0080F31D /* default.card.0042 in Resources */,
 				57C386541AAD6A8B0080F31D /* default.card.0003 in Resources */,
 				5766B7491AFB9BE5008A631D /* logan.card.0027 in Resources */,
@@ -803,6 +835,7 @@
 				57C386731AAD6A8B0080F31D /* default.card.0034 in Resources */,
 				5766B7301AFB9BE5008A631D /* logan.card.0002 in Resources */,
 				57C386801AAD6A8B0080F31D /* default.card.0047 in Resources */,
+				5822C6941E4DC1740068BBC2 /* style.css in Resources */,
 				57C3866B1AAD6A8B0080F31D /* default.card.0026 in Resources */,
 				574F0A961ABE07C1008EAF3B /* piece.vertical.png in Resources */,
 				5766B7611AFB9BE5008A631D /* logan.card.0051 in Resources */,
@@ -920,6 +953,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57BC29F51AA169E200098150 /* Hand.m in Sources */,
+				5822C6861E4DB61A0068BBC2 /* Guide.m in Sources */,
 				571E425F1ABFAA0400898520 /* GameViewController.m in Sources */,
 				57B172571AA182FD00DE1796 /* User.m in Sources */,
 				57494CBF1B32238000E9E3DD /* xxiivvSplash.m in Sources */,

@@ -120,7 +120,8 @@
 		_discardBarWrapper.frame = CGRectMake(card1Origin.origin.x + quarter + quarter, pos_bar_ver, pos_bar_width, 1);
 		_runButton.frame = CGRectMake(card1Origin.origin.x + quarter + quarter + quarter, pos_value_ver, quarter, pos_height * 2);
 		
-		_runButton.backgroundColor = [UIColor blackColor];
+        _runButton.backgroundColor = [UIColor blackColor];
+        _runButton.titleLabel.font = [UIFont systemFontOfSize: 14];
 		_runButton.layer.cornerRadius = 4;
 		_runButton.layer.borderColor = [[UIColor whiteColor] CGColor];
 		_runButton.layer.borderWidth = 1;
@@ -143,9 +144,11 @@
 		
 		_runButton.backgroundColor = [UIColor blackColor];
 		_runButton.titleEdgeInsets = UIEdgeInsetsMake(margin/8, 0, 0, 0);
+        _runButton.titleLabel.font = [UIFont systemFontOfSize: 14];
 		_runButton.layer.cornerRadius = 4;
 		_runButton.layer.borderColor = [[UIColor whiteColor] CGColor];
 		_runButton.layer.borderWidth = 1;
+        _runButton.titleLabel.text = @"spider";
 	}
 	
 	_lifeUpdateLabel.frame = _lifeValueLabel.frame;
@@ -220,7 +223,8 @@
 	_card3Image.image = [[playableHand card:2] image];
 	_card4Image.image = [[playableHand card:3] image];
 	
-	NSString * swordValue = [NSString stringWithFormat:@"%d(%d)",[user equip], [user malus]];
+	//NSString * swordValue = [NSString stringWithFormat:@"%d(%d)",[user equip], [user malus]];
+    NSString * swordValue = [NSString stringWithFormat:@"E%d(M%d)",[user equip], [user malus]];
 	
 	if( [user equip] > 0 ){
 		_swordLabel.text = [NSString stringWithFormat:NSLocalizedString(@"viewC.shield_d", @"SHIELD %d"),[user equip]];
@@ -231,11 +235,13 @@
 	}
 	else if( [user malus] < [user equip] )
 	{
-		swordValue = [NSString stringWithFormat:@"%d",[user malus]];
+		//swordValue = [NSString stringWithFormat:@"%d",[user malus]];
+        swordValue =[NSString stringWithFormat:@"E%d(M%d)",[user equip], [user malus]];
 	}
 	else if( [user malus] == 25 )
 	{
-		swordValue = [NSString stringWithFormat:@"%d",[user equip]];
+		//swordValue = [NSString stringWithFormat:@"%d",[user equip]];
+        swordValue =[NSString stringWithFormat:@"E%d(M%d)",[user equip], [user malus]];
 	}
 	
 	self.swordValueLabel.text = swordValue;
@@ -387,10 +393,12 @@
 		[self updateHealth:battleDamage*-1];
 	}
 	
-	int malusChange = [card value] - [user equip];
-	if( malusChange < 0 ){ [self updateSword:(malusChange)]; }
+	//int malusChange = [card value] - [user equip];
+	//if( malusChange < 0 ){ [self updateSword:(malusChange)]; }
 	
-	[user setMalus:[card value]];
+	//[user setMalus:[card value]];
+    [self updateSword:[card value]*-1];
+    [user setMalus:([user malus] - [card value])];
 	justHealed = 0;
 }
 
@@ -497,8 +505,8 @@
 		[self start];
 		[self life];
 		[self draw];
-//		[self playTuneNamed:@"tune.menu"];
-//		[self performSegueWithIdentifier: @"leave" sender: self];
+		[self playTuneNamed:@"tune.menu"];
+		[self performSegueWithIdentifier: @"leave" sender: self];
 	}
 	else{
 		[self runAction];
@@ -513,8 +521,8 @@
 -(void)leaveDungeon
 {
 	[self playSoundNamed:@"click.1"];
-	[self playTuneNamed:@"tune.menu"];
-	[self performSegueWithIdentifier: @"leave" sender: self];
+	//[self playTuneNamed:@"tune.menu"];
+	//[self performSegueWithIdentifier: @"leave" sender: self];
 }
 
 -(void)runAction
@@ -867,6 +875,7 @@
 
 -(void)apiContact:(NSString*)source :(NSString*)method :(NSString*)term :(NSString*)value
 {
+    /*
 	NSString *post = [NSString stringWithFormat:@"values={\"term\":\"%@\",\"value\":\"%@\"}",term,value];
 	NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
 	
@@ -883,7 +892,7 @@
 	NSData *POSTReply = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
 	NSString *theReply = [[NSString alloc] initWithBytes:[POSTReply bytes] length:[POSTReply length] encoding: NSASCIIStringEncoding];
 	NSLog(@"& API  | %@: %@",method, theReply);
-	
+	*/
 	return;
 }
 

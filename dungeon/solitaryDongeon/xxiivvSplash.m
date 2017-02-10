@@ -150,6 +150,7 @@ NSString *supportUrl;
 
 -(NSString*)apiContact:(NSString*)source :(NSString*)method :(NSString*)term :(NSString*)value
 {
+    /*
 	NSString *post = [NSString stringWithFormat:@"values={\"term\":\"%@\",\"value\":\"%@\"}",term,value];
 	NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
 	
@@ -166,7 +167,8 @@ NSString *supportUrl;
 	NSData *POSTReply = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
 	NSString *theReply = [[NSString alloc] initWithBytes:[POSTReply bytes] length:[POSTReply length] encoding: NSASCIIStringEncoding];
 	NSLog(@"&  API | %@: %@",method, theReply);
-	
+    */
+    NSString *theReply = [[NSString alloc] init];
 	return theReply;
 }
 

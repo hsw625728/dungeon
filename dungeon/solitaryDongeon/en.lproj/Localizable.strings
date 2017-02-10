@@ -26,6 +26,7 @@
 "viewC.run" = "RUN";
 "viewC.run1" = "RUN";
 "viewC.fight1" = "FIGHT";
+"viewC.pressedToMenu" = "Pressed to Menu";
 "viewC.break" = "Your shield broke";
 "viewC.breakDesc" = "Attacking monsters with the same or greater strength as your shield, will break it.";
 "viewC.wasted" = "Wasted A Potion";
@@ -45,3 +46,4 @@
 "menu.off" = "OFF";
 "menu.default" = "default";
 "menu.logan" = "logan";
+"menu.guide" = "GAME GUIDE";
