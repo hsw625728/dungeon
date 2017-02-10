@@ -15,8 +15,17 @@
 
 -(void)viewDidLoad
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"guide" ofType:@"html"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    NSString *path = [[NSString alloc] init];
+    NSURLRequest *request = [[NSURLRequest alloc] init];
+    if ([((NSString*)appDelegate.guideURL) isEqualToString:@"guide"]){
+        path = [[NSBundle mainBundle] pathForResource:@"guide" ofType:@"html"];
+        request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
+        //request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://mengyoutu.cn/dungeon/dungeonrecord.php?deviceID=%@&nickName=%@&userDesc=%@&record=%@", @"deviceID100",@"PangXie",@"This is my name.", @"1234567890"]]];
+    }else if ([((NSString*)appDelegate.guideURL) isEqualToString:@"rank"]){
+        request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://mengyoutu.cn/dungeon/dungeongetrecord.php"]];
+    }
+    
     [self.webView loadRequest:request];
     _closeButton.backgroundColor = [UIColor blackColor];
     _closeButton.titleLabel.font = [UIFont systemFontOfSize: 14];

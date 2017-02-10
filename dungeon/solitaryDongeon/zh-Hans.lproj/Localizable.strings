@@ -19,7 +19,7 @@
 "viewC.shuffle" = "洗牌";
 "viewC.pass" = "跳过";
 "viewC.retry" = "重试";
-"viewC.dungeon1" = "地牢［%d］层";
+"viewC.dungeon1" = "地牢第［%d］层";
 "viewC.pass1" = "跳过";
 "viewC.walking" = "继续";
 "viewC.fight" = "战斗";
@@ -41,7 +41,7 @@
 "viewC.lockedDesc" = "你不能连续两次逃跑。";
 "viewC.lockedDesc1" = "还有一张卡片留在地牢，你不可以逃跑。";
 "menu.score" = "最好成绩 %d";
-"menu.thanks" = "mengyoutu.cn";
+"menu.thanks" = "\nmengyoutu.cn";
 "menu.on" = "开";
 "menu.off" = "关";
 "menu.default" = "default";

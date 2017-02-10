@@ -361,23 +361,23 @@ typedef NS_ENUM(NSInteger, CastleTile) {
 	
 	// Pack
 	
-	_packDesignButton.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*3), self.view.frame.size.width-(2*margin), margin);
-	_packDesignLabel.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*3), self.view.frame.size.width-(2*margin), margin);
+	_packDesignButton.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*2.5), self.view.frame.size.width-(2*margin), margin);
+	_packDesignLabel.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*2.5), self.view.frame.size.width-(2*margin), margin);
 	
 	_packDesignLabel.text = [[self loadPackDesign] uppercaseString];
 	_packDesignLabel.textColor = [UIColor colorWithWhite:0.3 alpha:1];
 	
 	// Tutorial
 	
-	_tutorialToggleButton.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*5), self.view.frame.size.width-(2*margin), margin);
-	_tutorialToggleLabel.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*5), self.view.frame.size.width-(2*margin), margin);
+	_tutorialToggleButton.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*4), self.view.frame.size.width-(2*margin), margin);
+	_tutorialToggleLabel.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*4), self.view.frame.size.width-(2*margin), margin);
 	
 	_tutorialToggleLabel.text = [self loadTutorialSetting];
 	_tutorialToggleLabel.textColor = [UIColor colorWithWhite:0.3 alpha:1];
 	
-    // Guide
-    
-    _thanksButton.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*7), self.view.frame.size.width-(2*margin), margin);
+    // Guide And Rank
+    _thanksButton.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*5.5), self.view.frame.size.width-(2*margin), margin);
+    _rankButton.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*7), self.view.frame.size.width-(2*margin), margin);
     
 	// Thank
 	
@@ -436,6 +436,13 @@ typedef NS_ENUM(NSInteger, CastleTile) {
 	_tutorialToggleLabel.text = [[self loadTutorialSetting] uppercaseString];
 }
 - (IBAction)thanksButton:(id)sender {
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    appDelegate.guideURL = @"guide";
+    [self performSegueWithIdentifier:@"guide" sender:self];
+}
+- (IBAction)rankButton:(id)sender {
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    appDelegate.guideURL = @"rank";
     [self performSegueWithIdentifier:@"guide" sender:self];
 }
 

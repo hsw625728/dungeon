@@ -12,6 +12,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate,WCSessionDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) NSString *guideURL;
 
 +(void) syncScore;
 +(void)didUpdateScore;

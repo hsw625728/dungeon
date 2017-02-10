@@ -473,6 +473,34 @@
 		_card4Wrapper.frame = CGRectOffset(card4Origin, 0, margin*-1);
 		_card4Wrapper.alpha = 0;
 	} completion:^(BOOL finished){ }];
+    
+    //记录上传服务器
+    NSString *param=[NSString stringWithFormat:@"http://mengyoutu.cn/dungeon/dungeonrecord.php?deviceID=%@&nickName=%@&userDesc=%@&record=%@", \
+                     @"deviceID3",@"PangXie",@"This is my name.", @"1234567890"];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:param]];
+    
+    /*
+    [self.webView loadRequest:request];
+    
+    // 1.设置请求路径
+    NSURL *URL=[NSURL URLWithString:@"http://mengyoutu.cn/dungeon/dungeonrecord.php"];//不需要传递参数
+    
+    //    2.创建请求对象
+    NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:URL];//默认为get请求
+    request.timeoutInterval=5.0;//设置请求超时为5秒
+    //request.HTTPMethod=@"POST";//设置请求方法
+    
+    //设置请求体
+    //NSString *param=[NSString stringWithFormat:@"deviceID=%@&nickName=%@&userDesc=%@&record=%@", \
+                     @"deviceID",@"螃蟹",@"螃蟹目前是排名第一的勇士", @"1234567890"];
+    //把拼接后的字符串转换为data，设置请求体
+    request.HTTPBody=[param dataUsingEncoding:NSUTF8StringEncoding];
+    
+    //客户端类型，只能写英文
+    [request setValue:@"ios" forHTTPHeaderField:@"User-Agent"];
+    */
+    [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
 }
 
 -(void)life

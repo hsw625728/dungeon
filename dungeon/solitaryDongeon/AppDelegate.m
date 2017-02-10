@@ -28,6 +28,8 @@
         [[WCSession defaultSession] activateSession];
         [AppDelegate syncScore];
     }
+    
+    _guideURL = [[NSString alloc] init];
 	return YES;
 }
 
