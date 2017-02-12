@@ -378,6 +378,8 @@ typedef NS_ENUM(NSInteger, CastleTile) {
     // Guide And Rank
     _thanksButton.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*5.5), self.view.frame.size.width-(2*margin), margin);
     _rankButton.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*7), self.view.frame.size.width-(2*margin), margin);
+    _infoSettingButton.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*8.5), self.view.frame.size.width-(2*margin), margin);
+    
     
 	// Thank
 	
@@ -444,6 +446,9 @@ typedef NS_ENUM(NSInteger, CastleTile) {
     AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     appDelegate.guideURL = @"rank";
     [self performSegueWithIdentifier:@"guide" sender:self];
+}
+- (IBAction)infoSettingButton:(id)sender {
+    [self performSegueWithIdentifier:@"infoSetting" sender:self];
 }
 
 -(void)setPackDesign:(NSString*)pack

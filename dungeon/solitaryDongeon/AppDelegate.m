@@ -30,6 +30,11 @@
     }
     
     _guideURL = [[NSString alloc] init];
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    _nickName = [[NSString alloc] init];
+    _userDesc = [[NSString alloc] init];
+    _nickName = [ user objectForKey:@"nickName"];
+    _userDesc = [ user objectForKey:@"userDesc"];
 	return YES;
 }
 
@@ -150,5 +155,34 @@
 {
     [AppDelegate setHighScore:[AppDelegate scoreFromApplicationContext:applicationContext] shouldSync:true];
 }
-
++(void) uploadScore
+{
+    
+    //记录上传服务器
+    //NSString *post=[NSString stringWithFormat:@"http://mengyoutu.cn/dungeon/dungeonrecord.php?deviceID=%@&nickName=%@&userDesc=%@&record=%@", \
+    @"deviceID4",@"PangXie",@"This is my name4.", @"1234567890"];
+    NSString *idfv = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    NSString *scoreStr = [NSString stringWithFormat:@"%i", [AppDelegate highScore]];
+    AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
+    
+    
+    NSString *post = [NSString stringWithFormat:@"deviceID=%@&nickName=%@&userDesc=%@&record=%@",idfv,appDelegate.nickName,appDelegate.userDesc, scoreStr];
+    
+    NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+    
+    NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:@"http://mengyoutu.cn/dungeon/dungeonrecord.php"]];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/x-www-form-urlencoded;charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:postData];
+    
+    NSURLResponse *response;
+    NSData *POSTReply = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
+    NSString *theReply = [[NSString alloc] initWithBytes:[POSTReply bytes] length:[POSTReply length] encoding: NSASCIIStringEncoding];
+    NSLog(@"& API  | %@", theReply);
+}
 @end

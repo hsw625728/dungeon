@@ -13,11 +13,14 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSString *guideURL;
+@property (strong, nonatomic) NSString *nickName;
+@property (strong, nonatomic) NSString *userDesc;
 
 +(void) syncScore;
 +(void)didUpdateScore;
 +(void)setHighScore:(int)score shouldSync:(BOOL)shouldSync;
 +(int)highScore;
++(void) uploadScore;
 
 @end
 

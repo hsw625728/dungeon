@@ -178,6 +178,7 @@
 		5822C6931E4DC1740068BBC2 /* normalize.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 5822C6911E4DC1740068BBC2 /* normalize.min.css */; };
 		5822C6941E4DC1740068BBC2 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 5822C6921E4DC1740068BBC2 /* style.css */; };
 		5822C69B1E4DC2210068BBC2 /* guide.html in Resources */ = {isa = PBXBuildFile; fileRef = 5822C69A1E4DC2210068BBC2 /* guide.html */; };
+		5822C69D1E502FE90068BBC2 /* InfoSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 5822C69C1E502FE90068BBC2 /* InfoSetting.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -382,6 +383,8 @@
 		5822C6911E4DC1740068BBC2 /* normalize.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = normalize.min.css; path = Resources/normalize.min.css; sourceTree = "<group>"; };
 		5822C6921E4DC1740068BBC2 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = style.css; path = Resources/style.css; sourceTree = "<group>"; };
 		5822C69A1E4DC2210068BBC2 /* guide.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = guide.html; path = Resources/guide.html; sourceTree = "<group>"; };
+		5822C69C1E502FE90068BBC2 /* InfoSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoSetting.m; sourceTree = "<group>"; };
+		5822C69E1E502FF10068BBC2 /* InfoSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoSetting.h; sourceTree = "<group>"; };
 		58FDF0B91B138E38002C654E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58FDF0BA1B138E38002C654E /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		58FDF0BC1B138E38002C654E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -611,6 +614,8 @@
 				57B172531AA1807800DE1796 /* Card.m */,
 				57BC29F31AA169E200098150 /* Hand.h */,
 				57BC29F41AA169E200098150 /* Hand.m */,
+				5822C69E1E502FF10068BBC2 /* InfoSetting.h */,
+				5822C69C1E502FE90068BBC2 /* InfoSetting.m */,
 				57BC29F01AA1653E00098150 /* Deck.h */,
 				57BC29F11AA1653E00098150 /* Deck.m */,
 				57B172551AA182FD00DE1796 /* User.h */,
@@ -962,6 +967,7 @@
 				57BC29D31AA162BA00098150 /* ViewController.m in Sources */,
 				57C722861AB23B6C005F70B6 /* segueFade.m in Sources */,
 				57BC29D01AA162BA00098150 /* AppDelegate.m in Sources */,
+				5822C69D1E502FE90068BBC2 /* InfoSetting.m in Sources */,
 				57BC29CD1AA162BA00098150 /* main.m in Sources */,
 				57C722721AB22FE2005F70B6 /* Menu.m in Sources */,
 				57B172541AA1807800DE1796 /* Card.m in Sources */,

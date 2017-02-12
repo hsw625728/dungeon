@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *thanksLabel;
 @property (weak, nonatomic) IBOutlet UIButton *thanksButton;
 @property (weak, nonatomic) IBOutlet UIButton *rankButton;
+@property (weak, nonatomic) IBOutlet UIButton *infoSettingButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *packDesignButton;
 @property (weak, nonatomic) IBOutlet UILabel *packDesignLabel;
