@@ -369,16 +369,17 @@ typedef NS_ENUM(NSInteger, CastleTile) {
 	
 	// Tutorial
 	
-	_tutorialToggleButton.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*4), self.view.frame.size.width-(2*margin), margin);
-	_tutorialToggleLabel.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*4), self.view.frame.size.width-(2*margin), margin);
+	_tutorialToggleButton.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*40), self.view.frame.size.width-(2*margin), margin);
+	_tutorialToggleLabel.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*40), self.view.frame.size.width-(2*margin), margin);
+
 	
 	_tutorialToggleLabel.text = [self loadTutorialSetting];
-	_tutorialToggleLabel.textColor = [UIColor colorWithWhite:0.3 alpha:1];
+	_tutorialToggleLabel.textColor = [UIColor colorWithWhite:0.0 alpha:1];
 	
     // Guide And Rank
-    _thanksButton.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*5.5), self.view.frame.size.width-(2*margin), margin);
-    _rankButton.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*7), self.view.frame.size.width-(2*margin), margin);
-    _infoSettingButton.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*8.5), self.view.frame.size.width-(2*margin), margin);
+    _thanksButton.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*4), self.view.frame.size.width-(2*margin), margin);
+    _rankButton.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*5.5), self.view.frame.size.width-(2*margin), margin);
+    _infoSettingButton.frame = CGRectMake(margin, self.castleView.frame.size.height + (margin*7), self.view.frame.size.width-(2*margin), margin);
     
     
 	// Thank
@@ -390,18 +391,23 @@ typedef NS_ENUM(NSInteger, CastleTile) {
 	float ratio = self.view.frame.size.width/self.view.frame.size.height;
 	NSLog(@"%f",ratio);
 	
-	if( ratio == 0.75 ){
+	if( ratio > 0.7 ){
 		
 		float half_width = (self.view.frame.size.width-(2*margin))/2;
 		NSLog(@"Load iPad Layout");
-		_enterButton.frame = CGRectMake(margin, self.castleView.frame.size.height + margin, half_width, margin);
-		_scoreLabel.frame = CGRectMake(margin, self.castleView.frame.size.height + margin, half_width - 10, margin);
+		_enterButton.frame = CGRectMake(margin, self.castleView.frame.size.height + margin*0.5, half_width, margin);
+		_scoreLabel.frame = CGRectMake(margin, self.castleView.frame.size.height + margin*0.5, half_width - 10, margin);
 		
-		_tutorialToggleButton.frame = CGRectMake(margin + half_width + 10, self.castleView.frame.size.height + (margin*1), half_width - 10, margin);
+		_tutorialToggleButton.frame = CGRectMake(margin + half_width + 10, self.castleView.frame.size.height + (margin*50), half_width - 10, margin);
 		_tutorialToggleLabel.frame = _tutorialToggleButton.frame;
 		
-		_packDesignButton.frame = CGRectMake(margin + half_width + 10, self.castleView.frame.size.height + (margin*2), half_width - 10, margin);
-		_packDesignLabel.frame = _packDesignButton.frame;
+		_packDesignButton.frame = CGRectMake(margin + half_width + 10, self.castleView.frame.size.height + (margin*0.5), half_width - 10, margin);
+        _packDesignLabel.frame = _packDesignButton.frame;
+        
+        // Guide And Rank
+        _thanksButton.frame = CGRectMake(margin, self.castleView.frame.size.height + margin, half_width, margin);
+        _rankButton.frame = CGRectMake(margin + half_width + 10, self.castleView.frame.size.height + margin, half_width, margin);
+        _infoSettingButton.frame = CGRectMake(margin, self.castleView.frame.size.height + margin*1.5, half_width, margin);
 		
 		_thanksLabel.frame = CGRectMake(margin, _enterButton.frame.origin.y + margin, half_width - 10, margin);
 	}

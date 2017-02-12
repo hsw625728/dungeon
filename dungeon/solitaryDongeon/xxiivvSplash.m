@@ -53,7 +53,7 @@ NSString *supportUrl;
 	
 	// Create Support button
 	UIButton * supportButton = [[UIButton alloc] initWithFrame:CGRectMake(0, screen.size.height*0.80, screen.size.width, screenMargin)];
-	[supportButton setTitle:@"APPLICATION SUPPORT" forState:UIControlStateNormal];
+	[supportButton setTitle:@"mengyoutu.cn" forState:UIControlStateNormal];
 	supportButton.titleLabel.font = [UIFont fontWithName:@"DINAlternate-Bold" size:10];
 	[supportButton addTarget:self action:@selector(launchSupport) forControlEvents:UIControlEventTouchUpInside];
 	[supportButton setTitleColor:[UIColor colorWithWhite:1 alpha:0.5] forState:UIControlStateNormal];

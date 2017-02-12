@@ -224,7 +224,7 @@
 	_card4Image.image = [[playableHand card:3] image];
 	
 	//NSString * swordValue = [NSString stringWithFormat:@"%d(%d)",[user equip], [user malus]];
-    NSString * swordValue = [NSString stringWithFormat:@"E%d(M%d)",[user equip], [user malus]];
+    NSString * swordValue = [NSString stringWithFormat:@"%d(耐%d)",[user equip], [user malus]];
 	
 	if( [user equip] > 0 ){
 		_swordLabel.text = [NSString stringWithFormat:NSLocalizedString(@"viewC.shield_d", @"SHIELD %d"),[user equip]];
@@ -236,12 +236,12 @@
 	else if( [user malus] < [user equip] )
 	{
 		//swordValue = [NSString stringWithFormat:@"%d",[user malus]];
-        swordValue =[NSString stringWithFormat:@"E%d(M%d)",[user equip], [user malus]];
+        swordValue =[NSString stringWithFormat:@"%d(耐%d)",[user equip], [user malus]];
 	}
 	else if( [user malus] == 25 )
 	{
 		//swordValue = [NSString stringWithFormat:@"%d",[user equip]];
-        swordValue =[NSString stringWithFormat:@"E%d(M%d)",[user equip], [user malus]];
+        swordValue =[NSString stringWithFormat:@"%d(耐%d)",[user equip], [user malus]];
 	}
 	
 	self.swordValueLabel.text = swordValue;
@@ -523,8 +523,8 @@
 -(void)leaveDungeon
 {
 	[self playSoundNamed:@"click.1"];
-	//[self playTuneNamed:@"tune.menu"];
-	//[self performSegueWithIdentifier: @"leave" sender: self];
+	[self playTuneNamed:@"tune.menu"];
+	[self performSegueWithIdentifier: @"leave" sender: self];
 }
 
 -(void)runAction
